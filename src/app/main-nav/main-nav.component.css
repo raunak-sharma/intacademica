@@ -1,0 +1,75 @@
+mat-toolbar{
+  font-family: 'Quicksand', sans-serif;
+  background-color:	#340517;
+  z-index: 1;
+  position: fixed;
+}
+
+.sidenav-container {
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  margin: 0px;
+  background-color: #D2D4C8;
+}
+
+.sidenav {
+  width: 250px;
+  color: white;
+  background-color:	#101010;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.sideList{
+  color: white;
+  font-weight: 100;
+  font-size: 2.8vh;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.mat-toolbar.mat-primary {
+  font-weight: 100;
+  position: fixed;
+  top: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*Large displays*/
+@media (min-width : 740px) {
+
+  .sidenav{
+    display: none;
+  }
+
+}
+
+/*Small displays*/
+@media (max-width : 740px) {
+
+  .toolLinks{
+    display: none;
+  }
+
+  .logoLinks{
+    margin-left: 11.5%;
+  }
+
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.fonter{
+  padding: 10px;
+}
+
+.logoLinks{
+  padding: 10px;
+  /*background : url('./../../assets/hitk.png') no-repeat center center;*/
+}
+
+.toolLinks{
+  font-size: 2vh;
+  font-family: 'Quicksand', sans-serif;
+  padding: 10px;
+}

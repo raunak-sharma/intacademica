@@ -1,0 +1,89 @@
+<div class="container-fluid page">
+    <div class="row">
+
+      <div class="col-lg-3">
+      </div>
+      <div class="col-lg-6 login">
+
+        <div class="row" class="text-center">
+
+          <img src="https://image.flaticon.com/icons/png/512/146/146031.png" alt="Student Logo" class="imgSize">
+          <h1>Student Signup</h1>
+
+          <form class="former" novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+
+            <p>
+
+              <mat-form-field class="half-width">
+                  <input matInput formControlName="rollNo" placeholder="Roll No." type="text">
+              </mat-form-field>
+
+              &nbsp;&nbsp;&nbsp;&nbsp;
+
+              <mat-form-field class="half-width">
+                  <input matInput formControlName="name" placeholder="Full Name" type="text">
+              </mat-form-field>
+
+              <br>
+
+              <mat-form-field class="half-width">
+                  <mat-select formControlName="collegeID" placeholder="Select College ID">
+                      <mat-option *ngFor="let branchh of collegeIDs" [value]="branchh">
+                          {{branchh}}
+                      </mat-option>
+                  </mat-select>
+              </mat-form-field>
+
+              &nbsp;&nbsp;&nbsp;&nbsp;
+
+              <mat-form-field class="half-width">
+                  <mat-select formControlName="year" placeholder="Select Year">
+                      <mat-option *ngFor="let yearr of years" [value]="yearr">
+                          {{yearr}}
+                      </mat-option>
+                  </mat-select>
+              </mat-form-field>
+
+              <br>
+
+              <mat-form-field class="half-width">
+                  <input matInput formControlName="email" placeholder="Email ID" type="text">
+              </mat-form-field>
+
+              <br>
+
+              <mat-form-field class="half-width">
+                  <input matInput formControlName="password" placeholder="Password" type="text">
+              </mat-form-field>
+
+              <br>
+
+              <mat-form-field class="half-width">
+                  <input matInput formControlName="imgUrl" placeholder="Display Picture URL" type="text">
+              </mat-form-field>
+
+              <br>
+
+              <mat-form-field class="half-width">
+                  <input matInput formControlName="phoneNo" placeholder="Phone Number" type="text">
+              </mat-form-field>
+
+              <br>
+            </p>
+
+            <p class="subButton">
+              <button type="submit" mat-stroked-button class="background-primary text-floral-white">Submit</button>
+            </p>
+
+
+          </form>
+
+
+        </div>
+
+      </div>
+      <div class="col-lg-3">
+      </div>
+
+    </div>
+</div>

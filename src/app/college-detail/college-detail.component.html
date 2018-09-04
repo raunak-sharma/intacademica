@@ -1,0 +1,73 @@
+<div class="container-fluid page">
+
+    <div class="row">
+      <div class="col-lg-12 aCollegeP">
+        <img src="{{college.c_imgUrl }}" alt="" class="bgImg">
+        <h1  style="font-size:11vh; padding-top: 22vh;" class="topic text-center centered" >{{ college.c_name }}</h1>
+      </div>
+    </div>
+
+    <div class="row" style="width:100%;">
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-8 cont">
+            <i><h3 style="font-size:4.5vh" >College Details :</h3></i>
+            <h1 style="font-size:5vh">Acronym : {{ college.c_IDNo }}</h1>
+            <h1 style="font-size:5vh">Email : {{ college.c_email }} </h1>
+            <h1 style="font-size:5vh">Phone No. : {{ college.c_phoneNo }} </h1>
+
+            <br><br>
+
+            <i><h2 class="topic1" style="font-size:4.5vh">Streams available at {{ college.c_name }} :</h2></i>
+            <div *ngFor="let dept of college.c_depts">
+              <h1 style="font-size:5vh">{{ dept.deptName }}</h1>
+            </div>
+
+            <br><br>
+            <i><h3 style="font-size:4.5vh">Some notable clubs of the College :</h3></i>
+
+            <div *ngFor="let club of college.c_clubs">
+              <h1 style="font-size:5vh">{{ club }}</h1>
+            </div>
+
+        </div>
+        <div class="col-lg-2">
+        </div>
+    </div>
+
+
+
+    <div class="row">
+
+        <div class="col-lg-1">
+        </div>
+
+        <div class="col-lg-4 boxer">
+            <i><h3 class="topic1" style="font-size:5vh">The College Students are :</h3></i>
+            <br><br>
+            <div *ngFor="let student of students" [routerLink]="['/students', student.rollNo]">
+                <h2 style="font-size:5vh">{{ student.name }}</h2>
+                <h2 style="font-size:5vh">{{ student.rollNo }}</h2>
+                <h2 style="font-size:5vh">{{ student.year }}, {{ student.dept }}</h2>
+                <br>
+              </div>
+        </div>
+        <div class="col-lg-2">
+        </div>
+
+        <div class="col-lg-4 boxer">
+            <i><h3 class="topic1" style="font-size:4.5vh">The College Employees are :</h3></i>
+            <br><br>
+              <div *ngFor="let employee of employees" [routerLink]="['/employees', employee.emp_IDNo]">
+                <h2 style="font-size:5vh">{{ employee.emp_name }}</h2>
+                <h2 style="font-size:5vh">{{ employee.emp_IDNo }}</h2>
+                <h2 style="font-size:5vh">{{ employee.emp_design }}, {{ employee.emp_dept }}</h2>
+                <br>
+              </div>
+        </div>
+
+        <div class="col-lg-1">
+        </div>
+
+    </div>
+</div>

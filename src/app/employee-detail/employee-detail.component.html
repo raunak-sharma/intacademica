@@ -1,0 +1,30 @@
+<div class="container-fluid navPad page">
+
+    <div class="col-lg-12">
+      <div class="row headerDet">
+        <div class="col-lg-6 text-right">
+          <img src="{{ employee.emp_imgUrl }}" alt="{{ employee.emp_name }} Avatar" class="imgSizer">
+        </div>
+        <div class="col-lg-6">
+          <h1>{{ employee.emp_name }}</h1>
+          <h2>{{ employee.emp_IDNo }}</h2>
+          <h2>{{ employee.emp_design }}, {{ employee.emp_collegeName }}</h2>
+          <h2>{{ employee.emp_dept }}</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="width:100%;">
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-8 cont">
+            <i><h2 class="contDet">Contact Details </h2></i>
+            <br>
+            <h3 class="contDet" >Email : {{ employee.emp_email }} </h3>
+            <h3 class="contDet">Phone No. : {{ employee.emp_phoneNo }} </h3>
+        </div>
+        <div class="col-lg-2">
+        </div>
+    </div>
+
+  </div>

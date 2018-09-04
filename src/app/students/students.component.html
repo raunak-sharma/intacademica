@@ -1,0 +1,39 @@
+<div class="container-fluid navPad">
+
+    <div class="row">
+      <div class="col-lg-12 studentHead text-center">
+        <h1 style="font-size: 10vh;"><i class="material-icons" style="font-size: 11vh; ">perm_identity</i>Students</h1>
+      </div>
+    </div>
+
+    <div class="row allStudent">
+      <div class="col-lg-12">
+        <div *ngFor="let student of students" [routerLink]="['/students', student.rollNo]" >
+
+            <div class="row">
+              <div class="col-lg-2">
+              </div>
+
+              <div class="col-lg-8 aStudent">
+                <div class="row">
+                  <div class="col-lg-4">
+                      <img src="{{ student.imgUrl }}" alt="Student Logo" class="imgSize">
+                  </div>
+
+                  <div class="col-lg-8">
+                        <h2 class="contDet">{{ student.rollNo }} &nbsp; {{ student.name }}</h2>
+                        <h3 class="contDet">{{ student.collegeName }}, {{ student.dept }}</h3>
+                        <h3 class="contDet">{{ student.email }}</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-2">
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>

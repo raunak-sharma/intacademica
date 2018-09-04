@@ -1,0 +1,48 @@
+<div class="container-fluid navPad">
+
+  <div class="row">
+
+    <div class="col-lg-12 studentHead text-center">
+
+      <h1 style="font-size: 10vh;"><i class="material-icons" style="font-size: 11vh; ">supervisor_account</i>Teachers</h1>
+
+    </div>
+
+  </div>
+
+  <div class="row allStudent">
+
+      <div class="col-lg-12">
+
+        <div *ngFor="let employee of employees" [routerLink]="['/employees', employee.emp_IDNo]">
+            <div class="row">
+              <div class="col-lg-2">
+              </div>
+
+              <div class="col-lg-8 aStudent">
+
+                <div class="row">
+
+                  <div class="col-lg-4">
+                      <img src="{{ employee.emp_imgUrl }}" alt="Student Logo" class="imgSize">
+                  </div>
+
+                  <div class="col-lg-8">
+
+                        <h2>{{ employee.emp_IDNo }} &nbsp; {{ employee.emp_name }}</h2>
+                        <h3>{{ employee.emp_design }}, {{ employee.emp_collegeName }}</h3>
+                        <h3>{{ employee.emp_email }}</h3>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-lg-2">
+              </div>
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+
+</div>

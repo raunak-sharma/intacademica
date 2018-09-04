@@ -1,0 +1,51 @@
+<mat-sidenav-container class="sidenav-container" style="background-color:#1A1A1D;">
+    <mat-sidenav
+      #drawer
+      class="sidenav"
+      fixedInViewport="false"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+      <mat-toolbar color="primary" style="background-color:#101010; ">Menu</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item href="#" class="sideList"></a>
+        <a mat-list-item href="#" class="sideList" routerLink="/">Home</a>
+        <a mat-list-item href="#" class="sideList" routerLink="/students">Students</a>
+        <a mat-list-item href="#" class="sideList" routerLink="/employees">Teachers</a>
+        <a mat-list-item href="#" class="sideList" routerLink="/colleges">Colleges</a>
+        <a mat-list-item href="#" class="sideList" routerLink="/notes">Notes</a>
+        <a mat-list-item href="#" class="sideList" routerLink="/qpapers">Question Papers</a>
+        <a mat-list-item href="#" class="sideList" routerLink="/signup">Signup</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary" style="background-color:#3AAFA9; color: #17252A; height: 8vh; font-family: 'Quicksand', sans-serif;" class="fonter">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon"><i class="material-icons">list</i></mat-icon>
+        </button>
+
+        <i class="material-icons logoLinks">assessment</i><span routerLink="/"> IntAcademia</span>
+        <span class="example-spacer"></span>
+        <span class="toolLinks" routerLink="/">Home</span>
+        <span class="toolLinks" routerLink="/students">Students</span>
+        <span class="toolLinks" routerLink="/employees">Teachers</span>
+        <span class="toolLinks" routerLink="/colleges">Colleges</span>
+
+        <button class="toolLinks" mat-raised-button color="accent" [matMenuTriggerFor]="menu">Downloads</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/notes">Notes</button>
+          <button mat-menu-item routerLink="/qpapers">Question Papers</button>
+        </mat-menu>
+
+        <span class="toolLinks" routerLink="/signup">Signup</span>
+
+      </mat-toolbar>
+      <!-- Add Content Here -->
+      <ng-content></ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
