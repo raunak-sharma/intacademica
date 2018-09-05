@@ -70,7 +70,7 @@ export const STUDENTS : Student[] = [
         rollNo : "123458",
         dept : "IT",
         year : "3rd",
-        name : "Ovinonda Agarwal",
+        name : "Dopinder Agarwal",
         collegeID: "JU",
         collegeName : "Jadavpur University",
         email : "xyz4@example.com",

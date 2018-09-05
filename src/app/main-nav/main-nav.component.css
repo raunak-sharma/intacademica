@@ -14,13 +14,13 @@ mat-toolbar{
 
 .sidenav {
   width: 250px;
-  color: white;
+  color: #D2D4C8;
   background-color:	#101010;
   font-family: 'Quicksand', sans-serif;
 }
 
 .sideList{
-  color: white;
+  color: #D2D4C8;
   font-weight: 100;
   font-size: 2.8vh;
   font-family: 'Quicksand', sans-serif;

@@ -2,15 +2,16 @@
     padding: 55px;
     background-color: #DEF2F1;
     margin-top: 5vh;
-    border-radius: 15px;
 }
 
 .studentHead{
     padding-top: 11vh;
     background-color: #3AAFA9;
     color: #2B7A78;
-    min-height: 40vh;
+    min-height: 25vh;
+    padding-bottom: 10vh;
 }
+
 
 .allStudent{
     padding-bottom: 10vh;
@@ -22,6 +23,51 @@
     border: solid black 2px;
 }
 
-.contDet{
-    font-size:4.5vh;
+/*Large displays*/
+@media (min-width : 740px) {
+
+    .padder{
+        width: 25%;
+        margin-right: 100px;
+    }
+
+    .contDet{
+        font-size:3.5vh;
+    }
+
+    .contDet1{
+        font-size:2.8vh;
+    }
+
+    .aStudent{
+        border-radius: 15px;
+    }
+
+}
+
+  /*Small displays*/
+@media (max-width : 740px) {
+
+    .padder{
+        width: 100%;
+    }
+
+    .contDet{
+        font-size:4.5vh;
+    }
+
+    .contDet1{
+        font-size:3.8vh;
+    }
+
+}
+
+.but{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: black;
+    font-size: 2vh;
+    font-family: 'Quicksand', sans-serif;
 }

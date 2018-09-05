@@ -26,4 +26,8 @@ export class StudentDataService {
     return STUDENTS.filter(student => student.collegeID === id);
   }
 
+  getStudentSearch(name : string) {
+    return STUDENTS.filter(student => student.name.toLowerCase().includes(name.toLowerCase()));
+  }
+
 }

@@ -1,65 +1,80 @@
 <div class="container-fluid navPad page">
 
-    <div class="row" style="width:100%;">
+    <div class="row middler" style="margin-bottom: 10vh;">
 
-      <div class="col-lg-12">
-        <div class="row headerDet">
+      <div class="col-lg-12 middler">
+        <div class="row middler headerDet">
           <div class="col-lg-6 text-right">
             <img src="{{ student.imgUrl }}" alt="{{ student.name }} Avatar" class="imgSizer">
           </div>
           <div class="col-lg-6">
-            <h1>{{ student.name }}</h1>
-            <h2>{{ student.rollNo }}</h2>
-            <h2>{{ student.collegeName }}</h2>
-            <h2>{{ student.year }}, {{ student.dept }}</h2>
+            <h1 class="contDet">{{ student.name }}</h1>
+            <h2 class="contDet1">{{ student.rollNo }}</h2>
+            <h2 class="contDet1">{{ student.collegeName }}</h2>
+            <h2 class="contDet1">{{ student.year }}, {{ student.dept }}</h2>
           </div>
         </div>
       </div>
 
     </div>
 
-    <div class="row" style="width:100%;">
+    <div class="row middler">
         <div class="col-lg-2">
         </div>
         <div class="col-lg-8 cont">
-            <h2 class="contDet">Contact Details :</h2>
-            <h3 class="contDet">Email : {{ student.email }} </h3>
-            <h3 class="contDet">Phone No. : {{ student.phoneNo }} </h3>
+            <h2 class="contDet">Contact Details </h2>
+            <h3 class="contDet1">Email : {{ student.email }} </h3>
+            <h3 class="contDet1">Phone No. : {{ student.phoneNo }} </h3>
         </div>
         <div class="col-lg-2">
         </div>
     </div>
 
-    <div class="row" style="width:100%;">
+    <div class="row middler">
         <div class="col-lg-2">
         </div>
-        <div class="col-lg-8 graphBoxer">
-            <h2 class="contDet">This box has been left blank intentionally to present the student's graphs.</h2>
+        <div class="col-lg-8 middler graphBoxer text-center">
+
+          <div class="row middler">
+            <div class="col-lg-12">
+              <td ><canvas id="lineChart" style="width:100%; height: 50vh;"></canvas></td>
+            </div>
+          </div>
+
         </div>
         <div class="col-lg-2">
         </div>
       </div>
 
-    <div class="row" style="width:100%;">
+    <div class="row middler">
+
       <div class="col-lg-1">
+
       </div>
-      <div class="col-lg-5 boxer">
+      <div class="col-lg-4 boxer box1 middler">
           <i><h2 class="contDet" *ngIf="student.hobbies" >{{ student.name }}'s hobbies are :</h2></i>
           <br>
           <div *ngFor="let hobby of student.hobbies">
-            <h3 class="contDet">{{ hobby }}</h3>
+            <h3 class="contDet1">{{ hobby }}</h3>
           </div>
       </div>
 
-      <div class="col-lg-5 boxer">
+      <div class="col-lg-2">
+
+      </div>
+
+      <div class="col-lg-4 boxer box2">
           <i><h2 class="contDet">{{ student.name }}'s skills are :</h2></i>
           <br>
           <div *ngFor="let skill of student.skills">
-            <h3 class="contDet">{{ skill }}</h3>
+            <h3 class="contDet1">{{ skill }}</h3>
           </div>
       </div>
+
       <div class="col-lg-1">
+
       </div>
+
     </div>
 
   </div>

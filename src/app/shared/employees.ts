@@ -45,7 +45,7 @@ export const EMPLOYEES : Employee[] = [
         emp_IDNo : "123458",
         emp_design : "Professor",
         emp_dept : "IT",
-        emp_name : "Ovinonda Agarwal",
+        emp_name : "Dopinder Agarwal",
         emp_collegeID: "JU",
         emp_collegeName: "Jadavpur University",
         emp_email : "xyz4@example.com",

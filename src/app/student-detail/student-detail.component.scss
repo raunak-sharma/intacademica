@@ -1,5 +1,6 @@
 .page{
     background-color: #DEF2F1;
+    width: 100%;
 }
 
 .headerDet{
@@ -14,35 +15,68 @@
 }
 
 .cont{
-    margin: 8vh;
     padding: 55px;
-    margin-left: 2.1vh;
     background-color: #17252A;
     color: #DEF2F1;
     border-radius: 16px;
 }
 
 .boxer{
-    margin: 22px;
-    padding: 55px;
-    background-color: #66FCF1;
-    color: #17252A;
-    border-radius: 16px;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: #2B7A78;
+    color: #DEF2F1;
     margin-bottom: 11vh;
-    margin-left: -13px;
 }
 
 .graphBoxer{
-    min-height: 28vh;
-    margin: 22px;
-    padding: 55px;
-    padding-top: 85px;
-    background-color: #FFFFFF;
+    min-height: 50vh;
+    min-width: 80%;
+    background-color: #DEF2F1;
     color: #17252A;
     margin-bottom: 11vh;
-    border: solid 4px black;
+    margin-top: 11vh;
 }
 
-.contDet{
-    font-size:4.5vh;
+/*Large displays*/
+@media (min-width : 740px) {
+
+    .boxer{
+        border-radius: 16px;
+    }
+    .contDet{
+        font-size:3.5vh;
+    }
+
+    .contDet1{
+        font-size:2.8vh;
+    }
+
+    .box1 {
+        padding: 100px;
+        width:8vh;
+    }
+
+    .box2 {
+        padding: 100px;
+        width:100%;
+    }
+}
+
+  /*Small displays*/
+@media (max-width : 740px) {
+
+    .contDet{
+        font-size:4vh;
+    }
+
+    .contDet1{
+        font-size:3.5vh;
+    }
+}
+
+.middler{
+    width:100%;
+    margin-right: -0px;
+    margin-left: -0px;
 }

@@ -22,6 +22,32 @@
     border-radius: 16px;
 }
 
-.contDet{
-    font-size:4.5vh;
+/*Large displays*/
+@media (min-width : 740px) {
+
+    .contDet{
+        font-size:3.5vh;
+    }
+
+    .contDet1{
+        font-size:2.8vh;
+    }
+}
+
+  /*Small displays*/
+@media (max-width : 740px) {
+
+    .contDet{
+        font-size:4vh;
+    }
+
+    .contDet1{
+        font-size:3.5vh;
+    }
+}
+
+.middler{
+    width:100%;
+    margin-right: -0px;
+    margin-left: -0px;
 }
