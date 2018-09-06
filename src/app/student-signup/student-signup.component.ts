@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 import { StudentDataService } from '../student-data.service';
-import { Student } from '../shared/student';
-
 import { CollegeDataService } from '../college-data.service';
+import { LoggedInService } from '../logged-in.service';
+import { Router } from '@angular/router';
+
+import { Student } from '../shared/student';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { stdForm, Years } from '../shared/student_form';
@@ -23,6 +25,8 @@ export class StudentSignupComponent implements OnInit {
   constructor(
     private studentdataservice : StudentDataService,
     private collegedataservice : CollegeDataService,
+    private loggedinservice : LoggedInService,
+    private router: Router,
     private fb: FormBuilder
   ) {
     this.createForm();
@@ -50,9 +54,33 @@ export class StudentSignupComponent implements OnInit {
     });
   }
 
+  tryLogin() {
+    this.studentdataservice.login(
+      this.feedback.email,
+      this.feedback.password
+    ).subscribe(
+      response => {
+        if(response.token) {
+          console.log("Logged In bhsdk ", response );
+          this.loggedinservice.setToken(response.token);
+          this.router.navigateByUrl('/dashboard');
+        }
+        else{
+          console.log('Bhai', response.error);
+        }
+      },
+      response => {
+          alert(response.error.error);
+      }
+    )
+  }
+
   onSubmit() {
     this.feedback = this.feedbackForm.value;
     console.log('The Feedback recieved ', this.feedback);
+
+    this.tryLogin();
+
     this.feedbackForm.reset();
   }
 

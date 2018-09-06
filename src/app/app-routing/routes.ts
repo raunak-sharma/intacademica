@@ -13,6 +13,8 @@ import { EmployeeDetailComponent } from '../employee-detail/employee-detail.comp
 import { CollegeDetailComponent } from '../college-detail/college-detail.component';
 import { TeacherSignupComponent } from '../teacher-signup/teacher-signup.component';
 import { StudentSignupComponent } from '../student-signup/student-signup.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { AuthGuard } from '../auth.guard';
 
 export const routes : Routes = [
 
@@ -85,6 +87,12 @@ export const routes : Routes = [
     {
         path: 'signup/student',
         component: StudentSignupComponent
+    },
+
+    {
+        path: 'dashboard',
+        component: DashboardComponent,
+        canActivate: [ AuthGuard ]
     }
 
 ];

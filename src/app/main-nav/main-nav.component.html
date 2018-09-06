@@ -6,16 +6,20 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="!(isHandset$ | async)">
-      <mat-toolbar color="primary" style="background-color:#101010; ">Menu</mat-toolbar>
+      <mat-toolbar color="primary" style="background-color:#101010;">Menu</mat-toolbar>
       <mat-nav-list>
         <a mat-list-item href="#" class="sideList"></a>
         <a mat-list-item href="#" class="sideList" routerLink="/">Home</a>
+        <a *ngIf="!logIn" mat-list-item href="#" class="sideList" routerLink="/dashboard">Dashboard</a>
         <a mat-list-item href="#" class="sideList" routerLink="/students">Students</a>
         <a mat-list-item href="#" class="sideList" routerLink="/employees">Teachers</a>
         <a mat-list-item href="#" class="sideList" routerLink="/colleges">Colleges</a>
         <a mat-list-item href="#" class="sideList" routerLink="/notes">Notes</a>
         <a mat-list-item href="#" class="sideList" routerLink="/qpapers">Question Papers</a>
-        <a mat-list-item href="#" class="sideList" routerLink="/signup">Signup</a>
+        <a *ngIf="logIn" mat-list-item href="#" class="sideList" routerLink="/signup">Login</a>
+        <a *ngIf="logIn" mat-list-item href="#" class="sideList" routerLink="/signup">Signup</a>
+        <button (click)="logOut()" mat-stroked-button class="background-primary text-floral-white">LogOut</button>
+
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -29,7 +33,12 @@
           <mat-icon aria-label="Side nav toggle icon"><i class="material-icons">list</i></mat-icon>
         </button>
 
-        <i class="material-icons logoLinks">assessment</i><span routerLink="/"> IntAcademia</span>
+        <i class="material-icons logoLinks">assessment</i><span routerLink="/"> InteAcademia</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <span *ngIf="logged" class="toolLinks" routerLink="/dashboard">Dashboard</span>
+        <button *ngIf="logged" (click)="logOut()" mat-stroked-button class="background-primary text-floral-white">LogOut</button>
+
         <span class="example-spacer"></span>
         <span class="toolLinks" routerLink="/">Home</span>
         <span class="toolLinks" routerLink="/students">Students</span>
@@ -42,7 +51,8 @@
           <button mat-menu-item routerLink="/qpapers">Question Papers</button>
         </mat-menu>
 
-        <span class="toolLinks" routerLink="/signup">Signup</span>
+        <span *ngIf="!logged" class="toolLinks" routerLink="/signup">Signup</span>
+        <span *ngIf="!logged" class="toolLinks" routerLink="/login">Login</span>
 
       </mat-toolbar>
       <!-- Add Content Here -->

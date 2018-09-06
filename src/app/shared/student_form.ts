@@ -16,6 +16,8 @@ export class stdForm
 
     email : string;         //Email Addr. of the student
 
+    password : string;
+
     phoneNo : string;       //Phone No of the student
 
     skills : string[];      //Skills array of the student

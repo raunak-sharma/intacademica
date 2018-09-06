@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { StudentsComponent } from './students/students.component';
@@ -28,6 +29,7 @@ import { TeacherSignupComponent } from './teacher-signup/teacher-signup.componen
 import { StudentSignupComponent } from './student-signup/student-signup.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CollegeDetailComponent,
     EmployeeDetailComponent,
     TeacherSignupComponent,
-    StudentSignupComponent
+    StudentSignupComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatListModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [ CollegeDataService ],
   bootstrap: [AppComponent]

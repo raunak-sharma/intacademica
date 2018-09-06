@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
 
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { LoginResultModel } from './shared/loginModel';
+
 import { Student } from './shared/student';
 import { STUDENTS } from './shared/students';
 
@@ -8,7 +12,9 @@ import { STUDENTS } from './shared/students';
 })
 export class StudentDataService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
 
   student : Student;
@@ -28,6 +34,13 @@ export class StudentDataService {
 
   getStudentSearch(name : string) {
     return STUDENTS.filter(student => student.name.toLowerCase().includes(name.toLowerCase()));
+  }
+
+  login(email : string, password : string){
+    return this.http.post<LoginResultModel>('https://reqres.in/api/login', {
+      email: email,
+      password: password
+    });
   }
 
 }
