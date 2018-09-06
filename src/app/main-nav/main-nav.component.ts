@@ -22,20 +22,19 @@ export class MainNavComponent {
     private breakpointObserver: BreakpointObserver,
     private loggedinservice : LoggedInService,
     private router: Router
-  ) {}
+  ) { }
 
-  logged = false;
+  message : boolean;
 
   ngOnInit() {
-    if(this.loggedinservice.isLoggedIn != null ) {
-      console.log("In Nav You Are Logged");
-      this.logged = true;
-    }
+    this.loggedinservice.currentMessage.subscribe(message => this.message = message)
   }
 
   logOut() {
-    console.log("In Nav You Are False");
-    this.logged = false;
+
+    this.loggedinservice.changeMessage(false);
+    console.log("At Nav Message = ", this.message);
+
     this.loggedinservice.logOut();
   }
 

@@ -62,7 +62,11 @@ export class StudentSignupComponent implements OnInit {
       response => {
         if(response.token) {
           console.log("Logged In bhsdk ", response );
-          this.loggedinservice.setToken(response.token);
+
+          var stud = this.studentdataservice.getStudent('123458');
+          console.log("The student ds returned", stud);
+          this.loggedinservice.setToken(response.token, stud);
+
           this.router.navigateByUrl('/dashboard');
         }
         else{

@@ -31,7 +31,12 @@ export class LoginComponent implements OnInit {
     this.createForm();
   }
 
+  message : boolean;
+
   ngOnInit() {
+
+    this.loggedinservice.currentMessage.subscribe(message => this.message = message)
+
   }
 
   createForm() {
@@ -49,7 +54,13 @@ export class LoginComponent implements OnInit {
       response => {
         if(response.token) {
           console.log("Logged In bhsdk ", response );
-          this.loggedinservice.setToken(response.token);
+
+          this.loggedinservice.changeMessage(true);
+          console.log("At Log Message = ", this.message);
+
+          var stud = this.studentdataservice.getStudent('123458');
+          console.log("The student ds returned", stud);
+          this.loggedinservice.setToken(response.token, stud);
           this.router.navigateByUrl('/dashboard');
         }
         else{

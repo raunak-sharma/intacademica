@@ -1,19 +1,31 @@
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
 
-const TOKEN = 'TOKEN';
+import { Student } from './shared/student';
+
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
+
+const TOKEN = "TOKEN";
+var USER = "User";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class LoggedInService {
+  constructor(private router: Router
+  ) {}
 
-  constructor(
-    private router: Router
-  ) { }
+  private messageSource = new BehaviorSubject<boolean>(false);
+  currentMessage = this.messageSource.asObservable();
 
-  setToken(token : string) : void {
+  changeMessage(message : boolean) {
+    this.messageSource.next(message);
+  }
+
+
+  setToken(token: string, student : Student): void {
     localStorage.setItem(TOKEN, token);
+    localStorage.setItem(USER, JSON.stringify(student));
   }
 
   isLoggedIn() {
@@ -21,11 +33,10 @@ export class LoggedInService {
   }
 
   logOut() {
-    console.log('The Before Logout data : ', localStorage.getItem(TOKEN));
+    console.log("The Before Logout data : ", localStorage.getItem(TOKEN));
     localStorage.clear();
     console.log("Logging ya out dude");
-    console.log('The Logout data : ', localStorage.getItem(TOKEN));
-    this.router.navigateByUrl('/home');
+    console.log("The Logout data : ", localStorage.getItem(TOKEN));
+    this.router.navigateByUrl("/home");
   }
-
 }
