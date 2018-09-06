@@ -16,8 +16,8 @@
         <a mat-list-item href="#" class="sideList" routerLink="/colleges">Colleges</a>
         <a mat-list-item href="#" class="sideList" routerLink="/notes">Notes</a>
         <a mat-list-item href="#" class="sideList" routerLink="/qpapers">Question Papers</a>
-        <a *ngIf="logged" mat-list-item href="#" class="sideList" routerLink="/signup">Login</a>
-        <a *ngIf="logged" mat-list-item href="#" class="sideList" routerLink="/signup">Signup</a>
+        <a mat-list-item href="#" class="sideList" routerLink="/signup">Login</a>
+        <a mat-list-item href="#" class="sideList" routerLink="/signup">Signup</a>
         <button (click)="logOut()" mat-stroked-button class="background-primary text-floral-white">LogOut</button>
 
       </mat-nav-list>
@@ -36,8 +36,8 @@
         <i class="material-icons logoLinks">assessment</i><span routerLink="/"> InteAcademia</span>
         &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <span *ngIf="logged" class="toolLinks" routerLink="/dashboard">Dashboard</span>
-        <button *ngIf="logged" (click)="logOut()" mat-stroked-button class="background-primary text-floral-white">LogOut</button>
+        <span class="toolLinks" routerLink="/dashboard">Dashboard</span>
+        <button (click)="logOut()" mat-stroked-button class="background-primary text-floral-white">LogOut</button>
 
         <span class="example-spacer"></span>
         <span class="toolLinks" routerLink="/">Home</span>
@@ -51,8 +51,8 @@
           <button mat-menu-item routerLink="/qpapers">Question Papers</button>
         </mat-menu>
 
-        <span *ngIf="!logged" class="toolLinks" routerLink="/signup">Signup</span>
-        <span *ngIf="!logged" class="toolLinks" routerLink="/login">Login</span>
+        <span class="toolLinks" routerLink="/signup">Signup</span>
+        <span class="toolLinks" routerLink="/login">Login</span>
 
       </mat-toolbar>
       <!-- Add Content Here -->
