@@ -53,14 +53,14 @@ export class LoginComponent implements OnInit {
     ).subscribe(
       response => {
         if(response.token) {
-          console.log("Logged In bhsdk ", response );
+          console.log("Logged In ", response );
 
           this.loggedinservice.changeMessage(true);
           console.log("At Log Message = ", this.message);
 
           var stud = this.studentdataservice.getStudent('123458');
           console.log("The student ds returned", stud);
-          this.loggedinservice.setToken(response.token, stud);
+          this.loggedinservice.setToken(response.token, stud, this.message);
           this.router.navigateByUrl('/dashboard');
         }
         else{

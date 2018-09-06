@@ -25,16 +25,16 @@ export class MainNavComponent {
   ) { }
 
   message : boolean;
+  student : object;
 
   ngOnInit() {
+    console.log("Tise usesr", this.student);
     this.loggedinservice.currentMessage.subscribe(message => this.message = message)
   }
 
   logOut() {
-
     this.loggedinservice.changeMessage(false);
     console.log("At Nav Message = ", this.message);
-
     this.loggedinservice.logOut();
   }
 

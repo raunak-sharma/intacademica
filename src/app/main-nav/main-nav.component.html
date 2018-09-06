@@ -38,6 +38,7 @@
 
         <span *ngIf="message" class="toolLinks" routerLink="/dashboard">Dashboard</span>
         <button *ngIf="message" (click)="logOut()" mat-stroked-button class="background-primary text-floral-white">LogOut</button>
+        <button *ngIf="!message" mat-stroked-button class="background-primary text-floral-white" routerLink="/login">Login</button>
 
         <span class="example-spacer"></span>
         <span class="toolLinks" routerLink="/">Home</span>
@@ -51,8 +52,7 @@
           <button mat-menu-item routerLink="/qpapers">Question Papers</button>
         </mat-menu>
 
-        <span *ngIf="!message" class="toolLinks" routerLink="/signup">Signup</span>
-        <span *ngIf="!message" class="toolLinks" routerLink="/login">Login</span>
+        <button *ngIf="!message" mat-stroked-button class="background-primary text-floral-white" routerLink="/signup">Signup</button>
 
       </mat-toolbar>
       <!-- Add Content Here -->

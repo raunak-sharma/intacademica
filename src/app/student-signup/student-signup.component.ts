@@ -65,7 +65,7 @@ export class StudentSignupComponent implements OnInit {
 
           var stud = this.studentdataservice.getStudent('123458');
           console.log("The student ds returned", stud);
-          this.loggedinservice.setToken(response.token, stud);
+          this.loggedinservice.setToken(response.token, stud, true);
 
           this.router.navigateByUrl('/dashboard');
         }
