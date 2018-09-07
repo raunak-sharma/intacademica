@@ -21,13 +21,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.student = JSON.parse(localStorage.getItem('User'));
-    this.loggedinservice.currentMessage.subscribe(message => this.message = message)
-  }
-
-  logOut() {
-    this.loggedinservice.logOut();
-    this.loggedinservice.changeMessage(false);
-    console.log("At Dash Message = ", this.message);
   }
 
 }

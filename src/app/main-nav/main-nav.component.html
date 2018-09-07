@@ -16,14 +16,16 @@
         <a mat-list-item href="#" class="sideList" routerLink="/colleges">Colleges</a>
         <a mat-list-item href="#" class="sideList" routerLink="/notes">Notes</a>
         <a mat-list-item href="#" class="sideList" routerLink="/qpapers">Question Papers</a>
-        <a *ngIf="!message" mat-list-item href="#" class="sideList" routerLink="/login">Login</a>
-        <a *ngIf="!message" mat-list-item href="#" class="sideList" routerLink="/signup">Signup</a>
+        <!--a *ngIf="!message" mat-list-item href="#" class="sideList" routerLink="/login">Login</a>
+        <a *ngIf="!message" mat-list-item href="#" class="sideList" routerLink="/signup">Signup</a-->
+        <button *ngIf="!message" routerLink="/login" mat-stroked-button class="background-primary text-floral-white">Login</button>
+        <button *ngIf="!message" routerLink="/signup" mat-stroked-button class="background-primary text-floral-white">Signup</button>
         <button *ngIf="message" (click)="logOut()" mat-stroked-button class="background-primary text-floral-white">LogOut</button>
 
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-      <mat-toolbar color="primary" style="background-color:#3AAFA9; color: #17252A; height: 8vh; font-family: 'Quicksand', sans-serif;" class="fonter">
+      <mat-toolbar color="primary" style="background-color:#3AAFA9; color: #17252A; min-height: 8vh; font-family: 'Quicksand', sans-serif;" class="fonter">
         <button
           type="button"
           aria-label="Toggle sidenav"
@@ -33,26 +35,33 @@
           <mat-icon aria-label="Side nav toggle icon"><i class="material-icons">list</i></mat-icon>
         </button>
 
-        <i class="material-icons logoLinks">assessment</i><span routerLink="/"> IntAcademia</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="material-icons logoLinks">assessment</i><span routerLink="/">IntAcademia</span>
+
 
         <span *ngIf="message" class="toolLinks" routerLink="/dashboard">Dashboard</span>
-        <button *ngIf="message" (click)="logOut()" mat-stroked-button class="background-primary text-floral-white">LogOut</button>
-        <button *ngIf="!message" mat-stroked-button class="background-primary text-floral-white" routerLink="/login">Login</button>
 
         <span class="example-spacer"></span>
+
         <span class="toolLinks" routerLink="/">Home</span>
         <span class="toolLinks" routerLink="/students">Students</span>
         <span class="toolLinks" routerLink="/employees">Teachers</span>
         <span class="toolLinks" routerLink="/colleges">Colleges</span>
 
-        <button class="toolLinks" mat-raised-button color="accent" [matMenuTriggerFor]="menu">Downloads</button>
+        <button class="toolLinks" mat-raised-button color="accent" style="background-color:rgba(14, 204, 77, 0.486); color : white;" [matMenuTriggerFor]="menu">Downloads</button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item routerLink="/notes">Notes</button>
-          <button mat-menu-item routerLink="/qpapers">Question Papers</button>
+          <button mat-menu-item routerLink="/notes"><i class="material-icons" >assignment</i> Notes</button>
+          <button mat-menu-item routerLink="/qpapers"><i class="material-icons" >receipt</i> Question Papers</button>
         </mat-menu>
 
-        <button *ngIf="!message" mat-stroked-button class="background-primary text-floral-white" routerLink="/signup">Signup</button>
+        <button class="logLink" mat-raised-button color="accent" [matMenuTriggerFor]="menu1" style="background-color:rgba(226, 66, 159, 0.541); color : white;" >
+            <i *ngIf="message" class="material-icons">insert_emoticon</i>
+            <i class="material-icons">keyboard_arrow_down</i>
+        </button>
+        <mat-menu #menu1="matMenu">
+            <button *ngIf="!message" mat-menu-item routerLink="/login"><i class="material-icons">alternate_email</i>Login</button>
+            <button *ngIf="!message" mat-menu-item routerLink="/signup"><i class="material-icons">how_to_reg</i>SignUp</button>
+            <button *ngIf="message" (click)="logOut()" mat-menu-item><i class="material-icons">power_settings_new</i>Logout</button>
+        </mat-menu>
 
       </mat-toolbar>
       <!-- Add Content Here -->
