@@ -18,8 +18,10 @@
         <a mat-list-item href="#" class="sideList" routerLink="/qpapers">Question Papers</a>
         <!--a *ngIf="!message" mat-list-item href="#" class="sideList" routerLink="/login">Login</a>
         <a *ngIf="!message" mat-list-item href="#" class="sideList" routerLink="/signup">Signup</a-->
-        <button *ngIf="!message" routerLink="/login" mat-stroked-button class="background-primary text-floral-white">Login</button>
-        <button *ngIf="!message" routerLink="/signup" mat-stroked-button class="background-primary text-floral-white">Signup</button>
+        <br>
+        <button *ngIf="!message" style="margin-left:8px;" routerLink="/login" mat-stroked-button class="background-primary text-floral-white">Login</button>
+        <br><br>
+        <button *ngIf="!message" style="margin-left:8px;" routerLink="/signup" mat-stroked-button class="background-primary text-floral-white">Signup</button>
         <button *ngIf="message" (click)="logOut()" mat-stroked-button class="background-primary text-floral-white">LogOut</button>
 
       </mat-nav-list>
@@ -53,7 +55,7 @@
           <button mat-menu-item routerLink="/qpapers"><i class="material-icons" >receipt</i> Question Papers</button>
         </mat-menu>
 
-        <button class="logLink" mat-raised-button color="accent" [matMenuTriggerFor]="menu1" style="background-color:rgba(226, 66, 159, 0.541); color : white;" >
+        <button class="logLink ovo" mat-raised-button color="accent" [matMenuTriggerFor]="menu1" style="background-color:rgba(226, 66, 159, 0.541); color : white;" >
             <i *ngIf="message" class="material-icons">insert_emoticon</i>
             <i class="material-icons">keyboard_arrow_down</i>
         </button>

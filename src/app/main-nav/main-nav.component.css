@@ -45,11 +45,11 @@ mat-toolbar{
 /*Small displays*/
 @media (max-width : 740px) {
 
-  .toolLinks{
-    display: none;
+  .ovo{
   }
 
-  .logoLinks{
+  .toolLinks{
+    display: none;
   }
 
 }
@@ -68,9 +68,12 @@ mat-toolbar{
 }
 
 .toolLinks{
+  margin: 8px;
+  padding: 8px;
   font-size: 2vh;
   font-family: 'Quicksand', sans-serif;
-  padding: 10px;
+  border-radius: 25px;
+  border: solid rgba(15, 92, 69, 0.562) 1px;
 }
 
 .logLink{
