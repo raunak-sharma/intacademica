@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
           var stud = this.studentdataservice.getStudent('123458');
           console.log("The student ds returned", stud);
           this.loggedinservice.setToken(response.token, stud, this.message);
-          this.router.navigateByUrl('/dashboard');
+          this.router.navigateByUrl('/employees/123456');
         }
         else{
           console.log('Bhai', response.error);

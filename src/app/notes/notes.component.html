@@ -6,4 +6,37 @@
     </div>
   </div>
 
+  <div class="row allStudent">
+    <div class="col-lg-12">
+      <div *ngFor="let note of notes" [routerLink]="[  ]" >
+
+          <div class="row">
+            <div class="col-lg-2">
+            </div>
+
+            <div class="col-lg-8 aStudent">
+              <div class="row">
+                <div class="col-lg-4">
+                  <a href="{{ note.n_url }}">
+                    <img src="https://cdn2.iconfinder.com/data/icons/office-icons/256/Post-it_Notes-512.png" alt="Student Logo" class="imgSize">
+                  </a>
+                </div>
+
+                <div class="col-lg-8">
+                  <h2 class="contDet">{{ note.n_name }}</h2>
+                  <h2 class="contDet">{{ note.n_author }}</h2>
+                  <h3 class="contDet1">{{ note.n_subject }}</h3>
+                  <h3 class="contDet1">{{ note.n_uploader }}</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2">
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
 </div>
