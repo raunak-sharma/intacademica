@@ -22,14 +22,25 @@ export const STUDENTS : Student[] = [
             "Guitar",
             "Swimming",
             "Singing"
-        ]
+        ],
+        recoClubs: [
+            "Coding Club",
+            "Sports Club",
+            "Singing Club"
+        ],
+        marks : [
+            8.3, 8.5, 8.7, 8.6
+        ],
+        marksPred : 8.55,
+        totAttd : 28,
+        attended : 25
     },
 
     {
         rollNo : "123457",
         dept : "ECEN",
         year : "2nd",
-        name : "Shubham Pandy",
+        name : "Shubham Pandey",
         collegeID: "KIIT",
         collegeName : "Kalinga University",
         email : "xyz2@example.com",
@@ -41,17 +52,29 @@ export const STUDENTS : Student[] = [
             "Java"
         ],
         hobbies : [
-
-        ]
+            "Photography",
+            "Dance"
+        ],
+        recoClubs: [
+            "Photography",
+            "Sports Club",
+            "Dance Club"
+        ],
+        marks : [
+            8.3, 8.5, 8.7, 8.6
+        ],
+        marksPred : 8.55,
+        totAttd : 28,
+        attended : 25
     },
 
     {
         rollNo : "123455",
         dept : "CSE",
         year : "1st",
-        name : "Gopal Agarwal",
-        collegeID: "KIIT",
-        collegeName : "Kalinga University",
+        name : "Gopal Mishra",
+        collegeID: "HITK",
+        collegeName : "Heritage Institute Of Technology",
         email : "xyz3@example.com",
         password : "password",
         phoneNo : "9876543212",
@@ -63,7 +86,18 @@ export const STUDENTS : Student[] = [
         hobbies : [
             "Guitar",
             "Voleyball"
-        ]
+        ],
+        recoClubs: [
+            "Coding Club",
+            "Singing Club",
+            "Sports Club"
+        ],
+        marks : [
+            8.3, 8.5, 8.7, 8.6
+        ],
+        marksPred : 8.55,
+        totAttd : 28,
+        attended : 25
     },
 
     {
@@ -79,12 +113,24 @@ export const STUDENTS : Student[] = [
         imgUrl : "https://image.flaticon.com/icons/png/512/146/146031.png",
         skills : [
             "Java",
-            "C#"
+            "C#",
+            "HTML",
+            "CSS"
         ],
         hobbies : [
             "Swimming",
             "Football"
-        ]
+        ],
+        recoClubs: [
+            "Coding Club",
+            "Sports Club"
+        ],
+        marks : [
+            8.3, 8.5, 8.7, 8.6
+        ],
+        marksPred : 8.55,
+        totAttd : 28,
+        attended : 25
     },
 
     {
@@ -107,7 +153,53 @@ export const STUDENTS : Student[] = [
         hobbies : [
             "Dancing",
             "Cricket"
-        ]
+        ],
+        recoClubs: [
+            "Coding Club",
+            "Sports Club",
+            "Dance Club"
+        ],
+        marks : [
+            8.3, 8.5, 8.7, 8.6
+        ],
+        marksPred : 8.55,
+        totAttd : 28,
+        attended : 25
+    }
+    ,
+
+    {
+        rollNo : "123454",
+        dept : "CSE",
+        year : "2nd",
+        name : "Rahul Khanna",
+        collegeID: "RCCIT",
+        collegeName : "RCC Institute Of Technology",
+        email : "xyz5@example.com",
+        password : "password",
+        phoneNo : "9876543214",
+        imgUrl : "https://image.flaticon.com/icons/png/512/146/146031.png",
+        skills : [
+            "C++",
+            "Java",
+            "C#",
+            "Python"
+        ],
+        hobbies : [
+            "Dancing",
+            "Cricket"
+        ],
+        recoClubs: [
+            "Coding Club",
+            "Sports Club",
+            "Dance Club"
+        ],
+        marks : [
+            8.3, 8.5, 8.7, 8.6
+        ],
+        marksPred : 8.55,
+        totAttd : 28,
+        attended : 25
     }
 
 ];

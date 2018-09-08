@@ -41,7 +41,7 @@ export class StudentDetailComponent implements OnInit {
             {
               borderColor: "blue",
               label: 'Semester Points',
-              data: [6, 5.6, 9, 8.8, 5],
+              data : this.student.marks,
               fill: false,
               lineTension: 0.2,
               borderWidth: 1
@@ -49,8 +49,8 @@ export class StudentDetailComponent implements OnInit {
             {
               borderDash: [10,5],
               label: 'Predicted Semester Points',
-              data: [6, 5.6, 9, 8.8, 5, 7, 6.7, 10],
-              fill: false,
+              data : this.student.marks.concat(this.student.marksPred),
+              fill: true,
               lineTension: 0.2,
               borderColor: "red",
               borderWidth: 1
@@ -68,40 +68,13 @@ export class StudentDetailComponent implements OnInit {
               display: true
             }],
             yAxes: [{
-              display: true
+              display: true,
             }],
           }
         }
 
     });
 
-/*
-    this.chart = new Chart(this.chartRef.nativeElement, {
-      type: 'line',
-      data: {
-        labels: this.labels, // your labels array
-        datasets: [
-          {
-            data: this.dataPoints, // your data array
-            borderColor: '#00AEFF',
-            fill: false
-          }
-        ]
-      },
-      options: {
-        legend: {
-          display: false
-        },
-        scales: {
-          xAxes: [{
-            display: true
-          }],
-          yAxes: [{
-            display: true
-          }],
-        }
-      }
-      */
   }
 
 }

@@ -23,8 +23,11 @@ export const COLLEGES : College[] = [
         ],
 
         c_clubs : [
-            "Uday",
-            "E-Cell"
+            "Drama Club",
+            "Coding Club",
+            "Photography Club",
+            "Dance Club",
+            "Sports Club"
         ],
 
         c_email : "help@ju.com",
@@ -59,8 +62,12 @@ export const COLLEGES : College[] = [
 
 
         c_clubs : [
-            "Geeks United",
-            "Nothing at all!"
+            "Singing Club",
+            "Drama Club",
+            "Coding Club",
+            "Photography Club",
+            "Dance Club",
+            "Sports Club"
         ],
 
         c_email : "help@kiit.com",
@@ -72,7 +79,7 @@ export const COLLEGES : College[] = [
 
         c_name : "Heritage Institute Of Technology",
 
-        c_imgUrl: "http://college4u.in/wp-content/uploads/2017/01/heritage-830x551.jpg",
+        c_imgUrl: "https://static-collegedunia.com/public/college_data/images/appImage/1488795790e12.jpg",
 
         c_depts : [
             {
@@ -93,9 +100,13 @@ export const COLLEGES : College[] = [
         ],
 
         c_clubs : [
-            "Uday",
-            "E-Cell",
-            "Geeks United"
+            "Singing Club",
+            "Drama Club",
+            "Coding Club",
+            "Photography Club",
+            "Dance Club",
+            "Fashion Club",
+            "Sports Club"
         ],
 
         c_email : "help@hitk.com",
@@ -135,8 +146,12 @@ export const COLLEGES : College[] = [
 
 
         c_clubs : [
-            "Geeks United",
-            "Nothing at all!"
+            "Debate Club",
+            "Drama Club",
+            "Coding Club",
+            "Photography Club",
+            "Dance Club",
+            "Sports Club"
         ],
 
         c_email : "help@kiit.com",

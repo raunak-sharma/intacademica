@@ -34,9 +34,7 @@ export class LoginComponent implements OnInit {
   message : boolean;
 
   ngOnInit() {
-
     this.loggedinservice.currentMessage.subscribe(message => this.message = message)
-
   }
 
   createForm() {

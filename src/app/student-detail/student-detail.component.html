@@ -5,7 +5,7 @@
       <div class="col-lg-12 middler">
         <div class="row middler headerDet">
           <div class="col-lg-6 text-right">
-            <img src="{{ student.imgUrl }}" alt="{{ student.name }} Avatar" class="imgSizer">
+            <img src="{{ student.imgUrl }}" alt="{{ student.name }} Avatar" class="imgSizer thumbnail">
           </div>
           <div class="col-lg-6">
             <h1 class="contDet">{{ student.name }}</h1>
@@ -21,10 +21,16 @@
     <div class="row middler">
         <div class="col-lg-2">
         </div>
-        <div class="col-lg-8 cont">
+        <div class="col-lg-4 cont">
             <h2 class="contDet">Contact Details </h2>
             <h3 class="contDet1">Email : {{ student.email }} </h3>
             <h3 class="contDet1">Phone No. : {{ student.phoneNo }} </h3>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3 cont">
+          <h2 class="contDet">Attendance Details</h2>
+          <h4 class="contDet1">Attended : {{ student.attended }}</h4>
+          <h4 class="contDet1">Total Days : {{ student.totAttd }}</h4>
         </div>
         <div class="col-lg-2">
         </div>
@@ -44,7 +50,7 @@
         </div>
         <div class="col-lg-2">
         </div>
-      </div>
+    </div>
 
     <div class="row middler">
 
@@ -52,10 +58,10 @@
 
       </div>
       <div class="col-lg-4 boxer box1 middler">
-          <i><h2 class="contDet" *ngIf="student.hobbies" >{{ student.name }}'s hobbies are :</h2></i>
+          <i><h2 class="contDet" *ngIf="student.hobbies" >{{ student.name }}'s hobbies :</h2></i>
           <br>
           <div *ngFor="let hobby of student.hobbies">
-            <h3 class="contDet1">{{ hobby }}</h3>
+            <h3 class="contDet1"><button mat-raised-button color="primary">{{ hobby }}</button></h3>
           </div>
       </div>
 
@@ -64,10 +70,10 @@
       </div>
 
       <div class="col-lg-4 boxer box2">
-          <i><h2 class="contDet">{{ student.name }}'s skills are :</h2></i>
+          <i><h2 class="contDet">{{ student.name }}'s skills:</h2></i>
           <br>
           <div *ngFor="let skill of student.skills">
-            <h3 class="contDet1">{{ skill }}</h3>
+            <h2 class="contDet1"><button mat-raised-button color="primary">{{ skill }}</button></h2>
           </div>
       </div>
 
@@ -76,5 +82,20 @@
       </div>
 
     </div>
+
+    <div class="row middler">
+        <div class="col-lg-3">
+        </div>
+        <div class="col-lg-6 cont1">
+          <i><h2 class="contDet">Reccomended Clubs :</h2></i>
+          <br>
+          <div *ngFor="let club of student.recoClubs">
+              <h3 class="contDet1"><button mat-raised-button color="primary">{{ club }}</button></h3>
+          </div>
+        </div>
+        <div class="col-lg-3">
+        </div>
+    </div>
+
 
   </div>

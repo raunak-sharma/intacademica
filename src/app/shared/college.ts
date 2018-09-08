@@ -15,4 +15,5 @@ export class College
     c_email : string;       //An Email Addr. of the college
 
     c_phoneNo : string;     //Contact No. of the college
+
 }

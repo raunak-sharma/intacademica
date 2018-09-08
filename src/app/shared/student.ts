@@ -24,4 +24,13 @@ export class Student
 
     hobbies : string[];     //Hobies array of the student
 
+    marks : number[];
+
+    marksPred : number;
+
+    totAttd : number;
+
+    attended : number;
+
+    recoClubs : string[];
 }
