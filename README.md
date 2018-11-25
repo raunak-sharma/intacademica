@@ -1,4 +1,5 @@
 # IntAcademia
+## This is an ongoing team project, and all the code cannot be shared at this point of time. This repository just contains the basic layout of the app.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
